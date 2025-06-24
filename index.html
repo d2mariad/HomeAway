@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomeAway - Administrare proprietati in regim hotelier</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="#home">Home<span>Away</span></a>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#home">Acasa</a></li>
+            <li><a href="#services">Servicii</a></li>
+            <li><a href="#properties">Proprietati</a></li>
+            <li><a href="#about">Despre</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      </div>
+    </div>
+  </header>
+
+  <section id="home" class="hero upgraded-hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content centered">
+    <h1>Transformam proprietatile tale<br>in experiente de neuitat</h1>
+    <p class="hero-subtitle">Administrare completa, profesionalism garantat</p>
+    <a href="#contact" class="btn btn-hero">Contacteaza-ne acum</a>
+  </div>
+</section>
+
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Serviciile noastre</h2>
+        <p>Oferim o gama completa de servicii pentru administrarea proprietatilor dumneavoastra in regim hotelier</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-img" style="background-image: url('assets/logo2.png');"></div>
+          <div class="service-content">
+            <h3>Procesul de inchiriere</h3>
+            <p>Gestionam intregul proces de la contactul initial pana la check-out, fiind disponibili pe tot parcursul sederii.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-img" style="background-image: url('/api/placeholder/400/300');"></div>
+          <div class="service-content">
+            <h3>Curatenie si intretinere</h3>
+            <p>Ne ocupam de curatenia apartamentului si verificam functionalitatea tuturor facilitatilor dupa fiecare inchiriere.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-img" style="background-image: url('/api/placeholder/400/300');"></div>
+          <div class="service-content">
+            <h3>Mentenanta</h3>
+            <p>Rezolvam prompt orice problema aparuta pe durata contractului.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="properties" class="properties">
+    <div class="container">
+      <div class="section-title">
+        <h2>Proprietatile administrate</h2>
+      </div>
+      <div class="properties-grid">
+        <div class="property-card">
+          <div class="property-img" style="background-image: url('assets/nook.png');"></div>
+          <div class="property-content">
+            <h3>The Cozy Nook | Ultra Central</h3>
+            <div class="apartament-details">
+              <span>2 guests</span>
+              <span>1 bedroom</span>
+              <span>1 bed</span>
+              <span>1 bath</span>
+            </div>
+            <a href="https://www.airbnb.com/rooms/1347021607423955849" class="btn" target="_blank">Vezi detalii</a>
+          </div>
+        </div>
+        <div class="property-card">
+          <div class="property-img" style="background-image: url('assets/comfort.png');"></div>
+          <div class="property-content">
+            <h3>The Comfort Cove | Ultra Central</h3>
+            <div class="apartament-details">
+              <span>2 guests</span>
+              <span>1 bedroom</span>
+              <span>1 bed</span>
+              <span>1 bath</span>
+            </div>
+            <a href="https://www.airbnb.com/rooms/1344468396736316097" class="btn" target="_blank">Vezi detalii</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-img"></div>
+        <div class="about-text">
+          <h2>Despre serviciile noastre</h2>
+          <p>Suntem o companie dedicata administrarii proprietatilor in regim hotelier. Oferim servicii complete pentru maximizarea veniturilor fara stresul gestionarii zilnice.</p>
+          <p>Ne ocupam de tot: comunicarea cu chiriasii, check-in/check-out, curatenie si mentenanta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contactati-ne</h2>
+        <p>Suntem aici pentru a raspunde intrebarilor dumneavoastra.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Informatii de contact</h3>
+          <p>Telefon: +40 735 0260 32</p>
+          <p>Telefon: +40 771 266 418</p>
+          <p>Email: homeaway@gmail.com</p>
+          <h3>Program de lucru</h3>
+          <p>Luni - Vineri: 09:00 - 18:00</p>
+          <p>Sambata: 10:00 - 14:00</p>
+          <p>Duminica: Inchis</p>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm">
+            <input type="text" id="name" name="name" placeholder="Nume" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="tel" id="phone" name="phone" placeholder="Telefon">
+            <input type="text" id="subject" name="subject" placeholder="Subiect">
+            <textarea id="message" name="message" rows="5" placeholder="Mesaj" required></textarea>
+            <button type="submit" class="btn">Trimite mesajul</button>
+            <div id="success-message" style="display: none; color: green;">Mesajul a fost trimis cu succes!</div>
+            <div id="error-message" style="display: none; color: red;">A aparut o eroare. Va rugam sa incercati din nou.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h3>Property<span>Manager</span></h3>
+          <p>Administrarea completa a proprietatilor in regim hotelier.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Link-uri rapide</h3>
+          <ul>
+            <li><a href="#home">Acasa</a></li>
+            <li><a href="#services">Servicii</a></li>
+            <li><a href="#properties">Proprietati</a></li>
+            <li><a href="#about">Despre</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Urmareste-ne</h3>
+          <ul>
+            <li><a href="https://www.instagram.com/homeaway.ro/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.airbnb.com" target="_blank">Airbnb</a></li>
+            <li><a href="https://www.booking.com" target="_blank">Booking</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">© 2025 PropertyManager. Toate drepturile rezervate.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("ujruIE_swPEkKph1Z");
+
+      document.getElementById('contactForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const btn = document.querySelector('button[type="submit"]');
+        btn.textContent = 'Se trimite...';
+        btn.disabled = true;
+
+        const params = {
+          name: document.getElementById('name').value,
+          email: document.getElementById('email').value,
+          phone: document.getElementById('phone').value,
+          subject: document.getElementById('subject').value,
+          message: document.getElementById('message').value
+        };
+
+        emailjs.send('service_57k9ku5', 'template_lj0vq5d', params)
+          .then(() => {
+            document.getElementById('contactForm').reset();
+            document.getElementById('success-message').style.display = 'block';
+            btn.textContent = 'Trimite mesajul';
+            btn.disabled = false;
+            setTimeout(() => document.getElementById('success-message').style.display = 'none', 5000);
+          })
+          .catch(() => {
+            document.getElementById('error-message').style.display = 'block';
+            btn.textContent = 'Trimite mesajul';
+            btn.disabled = false;
+            setTimeout(() => document.getElementById('error-message').style.display = 'none', 5000);
+          });
+      });
+    })();
+  </script>
+
+  <script src="hamburger.js"></script>
+</body>
+</html>
