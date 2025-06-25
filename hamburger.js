@@ -1,4 +1,4 @@
-// script.js
+
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         nav.classList.toggle('active');
     });
     
-    // Close menu when clicking on a nav link
+    
     const navLinks = document.querySelectorAll('nav ul li a');
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
