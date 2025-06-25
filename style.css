@@ -89,47 +89,54 @@ nav ul li a:hover {
 /* Upgraded Hero Section */
 .upgraded-hero {
   position: relative;
-  background-image: url('assets/design\ \(22\).png'); /* Replace with your real image */
-  background-size: cover;
-  background-position: center;
   height: 100vh;
+  background-image: url("assets/design (22).png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  text-align: center;
-  overflow: hidden;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
 .centered {
-  position: relative;
+  position: absolute;
+  top: 48%; /* ajustezi până e sub umbră */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
   z-index: 2;
   max-width: 800px;
+  width: 90%;
   padding: 0 20px;
 }
 
+
+
 .upgraded-hero h1 {
-  font-size: 3.5rem;
+  font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.2;
 }
 
 .hero-subtitle {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   margin-bottom: 30px;
   color: #f0f0f0;
 }
 
 .btn-hero {
-  background-color: #e8881a;
+  background-color: #0e0e0d;
   padding: 14px 36px;
   font-size: 1.1rem;
   border-radius: 50px;
@@ -321,6 +328,10 @@ footer {
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.5rem;
+    .centered {
+  top: 55%;
+}
+
   }
 
   .menu-toggle {
