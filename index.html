@@ -51,14 +51,14 @@
           </div>
         </div>
         <div class="service-card">
-          <div class="service-img" style="background-image: url('/api/placeholder/400/300');"></div>
+          <div class="service-img" style="background-image: url('assets/logo2.png');"></div>
           <div class="service-content">
             <h3>Curatenie si intretinere</h3>
             <p>Ne ocupam de curatenia apartamentului si verificam functionalitatea tuturor facilitatilor dupa fiecare inchiriere.</p>
           </div>
         </div>
         <div class="service-card">
-          <div class="service-img" style="background-image: url('/api/placeholder/400/300');"></div>
+          <div class="service-img" style="background-image: url('assets/logo2.png');"></div>
           <div class="service-content">
             <h3>Mentenanta</h3>
             <p>Rezolvam prompt orice problema aparuta pe durata contractului.</p>
@@ -84,7 +84,9 @@
               <span>1 bed</span>
               <span>1 bath</span>
             </div>
-            <a href="https://www.airbnb.com/rooms/1347021607423955849" class="btn" target="_blank">Vezi detalii</a>
+            <button class="btn show-modal" data-airbnb="https://www.airbnb.com/rooms/1347021607423955849" data-booking="https://www.booking.com/hotel/ro/stefy-brasov.ro.html
+">Vezi detalii</button>
+
           </div>
         </div>
         <div class="property-card">
@@ -97,7 +99,8 @@
               <span>1 bed</span>
               <span>1 bath</span>
             </div>
-            <a href="https://www.airbnb.com/rooms/1344468396736316097" class="btn" target="_blank">Vezi detalii</a>
+             <button class="btn show-modal" data-airbnb="https://www.airbnb.com/rooms/1344468396736316097" data-booking="https://www.booking.com/hotel/ro/stefy-2.ro.html">Vezi detalii</button>
+
           </div>
         </div>
       </div>
@@ -218,5 +221,16 @@
   </script>
 
   <script src="hamburger.js"></script>
+  <div id="detailsModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h3>Alege platforma:</h3>
+    <div class="modal-buttons">
+      <a href="#" id="airbnbLink" class="btn" target="_blank">Airbnb</a>
+      <a href="#" id="bookingLink" class="btn" target="_blank">Booking</a>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
