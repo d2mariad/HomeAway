@@ -14,53 +14,7 @@
   --pure-white: #ffffff;           /* Actual white when needed */
 }
 
-/* Alternative Option 1: Navy & Gold (Premium) */
-/*
-:root {
-  --primary-color: #1a365d;        // Deep navy
-  --secondary-color: #f7fafc;      // Off-white
-  --accent-color: #d69e2e;         // Warm gold
-  --text-color: #2d3748;           // Dark gray
-  --light-gray: #edf2f7;           // Light blue-gray
-  --dark-gray: #4a5568;            // Medium gray
-  --white: #ffffff;                // Pure white
-  --muted-text: #718096;           // Muted blue-gray
-  --success-color: #38a169;        // Green accent
-  --border-color: #e2e8f0;         // Light border
-}
-*/
 
-/* Alternative Option 2: Burgundy & Cream (Elegant) */
-/*
-:root {
-  --primary-color: #744c4c;        // Burgundy
-  --secondary-color: #fefefe;      // Near white
-  --accent-color: #b8860b;         // Dark golden rod
-  --text-color: #2c2c2c;           // Dark charcoal
-  --light-gray: #f9f7f7;           // Warm light gray
-  --dark-gray: #5a5a5a;            // Medium gray
-  --white: #ffffff;                // Pure white
-  --muted-text: #777777;           // Muted gray
-  --success-color: #2d7a2d;        // Forest green
-  --border-color: #e8e8e8;         // Light border
-}
-*/
-
-/* Alternative Option 3: Teal & Sand (Modern) */
-/*
-:root {
-  --primary-color: #285e61;        // Dark teal
-  --secondary-color: #f7fafc;      // Light background
-  --accent-color: #d69e2e;         // Warm gold
-  --text-color: #2d3748;           // Dark text
-  --light-gray: #edf2f7;           // Light gray
-  --dark-gray: #4a5568;            // Medium gray
-  --white: #ffffff;                // Pure white
-  --muted-text: #718096;           // Muted text
-  --success-color: #38a169;        // Success green
-  --border-color: #e2e8f0;         // Light border
-}
-*/
 
 /* Reset */
 * {
@@ -164,7 +118,7 @@ nav ul li a:hover {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(228, 128, 28, 0.329), rgba(44, 62, 80, 0.6));
+  background: linear-gradient(135deg, rgba(44, 95, 45, 0.7), rgba(44, 62, 80, 0.6));
   z-index: 1;
 }
 
@@ -427,7 +381,7 @@ nav ul li a:hover {
 }
 
 footer {
-   background: linear-gradient(135deg, #0f0f0f, #1f1f1f); /* mai contrastant și elegant */
+  background-color: #1a1a1a;
   color: #f1f1f1;
   padding: 60px 0 20px;
 }
@@ -565,22 +519,85 @@ footer {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive */
+/* Enhanced Responsive Design */
+
+/* Extra Large Screens */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+  
+  .upgraded-hero h1 {
+    font-size: 5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.8rem;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .services-grid, .properties-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Medium Screens */
+@media (min-width: 901px) and (max-width: 1199px) {
+  .services-grid, .properties-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .upgraded-hero h1 {
+    font-size: 3.5rem;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+}
+
+/* Tablet Landscape */
 @media (max-width: 900px) {
-  .contact-grid,
+  .contact-grid {
+    flex-direction: column;
+  }
+
   .about-content {
     flex-direction: column;
+    text-align: center;
   }
 
   .about-img {
     height: 300px;
     margin-bottom: 30px;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .about {
+    padding: 80px 0;
+  }
+  
+  .services-grid, .properties-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .section-title h2 {
+    font-size: 2.2rem;
   }
 }
 
+/* Tablet Portrait */
 @media (max-width: 768px) {
   .upgraded-hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem;
   }
 
   .menu-toggle {
@@ -625,13 +642,27 @@ footer {
 
   nav ul li a {
     display: block;
-    padding: 8px 0;
+    padding: 12px 0;
     font-size: 18px;
+  }
+  
+  .services, .properties, .about, .contact {
+    padding: 60px 0;
+  }
+  
+  .section-title h2 {
+    font-size: 2rem;
+  }
+  
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 }
 
+/* Large Mobile */
 @media (max-width: 600px) {
-  .properties-grid {
+  .properties-grid, .services-grid {
     grid-template-columns: 1fr;
     gap: 15px;
   }
@@ -643,11 +674,30 @@ footer {
   .hero-subtitle {
     font-size: 1.1rem;
   }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .contact-info, .contact-form {
+    min-width: auto;
+  }
+  
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
 }
 
+/* Mobile */
 @media (max-width: 500px) {
   .upgraded-hero h1 {
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     line-height: 1.3;
     padding: 0 10px;
   }
@@ -660,6 +710,79 @@ footer {
   .btn-hero {
     padding: 12px 24px;
     font-size: 1rem;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .services, .properties, .about, .contact {
+    padding: 50px 0;
+  }
+  
+  .service-content, .property-content {
+    padding: 20px;
+  }
+  
+  .service-content h3, .property-content h3 {
+    font-size: 1.4rem;
+  }
+  
+  .about-content {
+    gap: 30px;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    padding: 12px 15px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 400px) {
+  .upgraded-hero h1 {
+    font-size: 1.7rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .btn-hero {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .section-title h2 {
+    font-size: 1.6rem;
+  }
+  
+  .logo {
+    font-size: 20px;
+  }
+  
+  .header-content {
+    padding: 12px 0;
+  }
+}
+
+/* Very Short Screens (Landscape phones) */
+@media (max-height: 500px) and (orientation: landscape) {
+  .upgraded-hero {
+    padding-top: 100px;
+  }
+  
+  .upgraded-hero h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .services, .properties, .about, .contact {
+    padding: 40px 0;
   }
 }
 
@@ -681,5 +804,22 @@ footer {
 
   .hero-content.centered {
     padding: 0 10px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  * {
+    color: black !important;
+    background: white !important;
+  }
+  
+  .menu-toggle, nav, .modal {
+    display: none !important;
+  }
+  
+  .upgraded-hero {
+    height: auto;
+    padding: 50px 0;
   }
 }
